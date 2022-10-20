@@ -7,17 +7,24 @@
     <title>Document</title>
     <style>
         div{
-            font-size: 30px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 100px;
             text-align: center;
-            color: #666;
-            animation: alternate infinite 5s move;
+            color: rgb(0, 0, 0);
+            animation: alternate infinite 3s move;
         }
         @keyframes move {
             0%{
+                color: rgb(210, 247, 78);
                 opacity: 0;
             }
             100%{
+                color: cadetblue;
                 opacity: 1;
+
             }
         }    
     </style>
@@ -25,6 +32,7 @@
 <body>
     <div>
         头发掉光光呀小兄弟
+
     </div>
 </body>
 </html>
