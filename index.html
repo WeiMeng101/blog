@@ -1,38 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {}
+
+        .title {
             position: absolute;
+            width: 30%;
             left: 50%;
             top: 50%;
-            transform: translate(-50%,-50%);
-            font-size: 100px;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
             text-align: center;
-            color: rgb(0, 0, 0);
             animation: alternate infinite 3s move;
+            border: 2px solid;
         }
+
         @keyframes move {
-            0%{
+            0% {
                 color: rgb(210, 247, 78);
                 opacity: 0;
             }
-            100%{
+
+            100% {
                 color: cadetblue;
                 opacity: 1;
 
             }
-        }    
+        }
+        .ti{
+            position:absolute;
+            left: 50%;
+            top: 40%;
+            font-size: 20px;
+            font-weight: bold;
+            transform: translate(-50%, -50%);
+
+        }
     </style>
 </head>
-<body>
-    <div>
-        头发掉光光呀小兄弟
 
+<body>
+
+    <div class="title">
+        头发掉光光呀小兄弟
     </div>
+    <div class="ti">
+        <span>好</span>
+        <span>好</span>
+        <span>学</span>
+        <span>习</span>
+        <span>，</span>
+        <span>天</span>
+        <span>天</span>
+        <span>上</span>
+        <span>呀</span>
+        <span>!</span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js">
+
+
+    </script>
+    <script>
+        gsap.fromTo(".title", {
+            x: 0,
+            y: 200,
+
+        },{
+            y:0,
+            x:0,
+            duration:3,
+            repeat:-1,
+            yoyo:true
+
+        })
+        gsap.fromTo(".ti>span",{
+            y:60
+        },{
+            y:0,
+            duration:3,
+            stagger:0.5,
+        })
+    </script>
 </body>
+
 </html>
