@@ -46,6 +46,9 @@
             transform: translate(-50%, -50%);
 
         }
+        span{
+            display: inline-block;
+        }
     </style>
 </head>
 
@@ -84,12 +87,16 @@
 
         })
         gsap.fromTo(".ti>span",{
-            y:60
+            y:-20
         },{
             y:0,
-            duration:3,
-            stagger:0.5,
+            duration:0.7,
+            stagger:0.3,
+            yoyo:true,
+            repeat:-1
         })
+        let ti = document.querySelectorAll(".ti>span")
+        console.log(ti);
     </script>
 </body>
 
